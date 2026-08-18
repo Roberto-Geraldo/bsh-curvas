@@ -1,12 +1,14 @@
 ---
-title: "Serra da Estrela"
+title: Serra da Estrela
 date: 2026-08-15
-tags: ["Serra da Estrela", "2 dias"]
+tags:
+  - Serra da Estrela
+  - 2 dias
 params:
   distancia: ""
-  duracao: "15 e 16 de agosto de 2026"
-  partida: "Ferreiros - BRG"
-  chegada: "Tranca da Barriga - Covilhã"
+  duracao: 15 e 16 de agosto de 2026
+  partida: Ferreiros - BRG
+  chegada: Tranca da Barriga - Covilhã
 fotos:
   - foto01.jpeg
   - foto02.jpeg
@@ -59,20 +61,19 @@ fotos:
   - foto49.jpg
   - foto50.jpg
 ---
-
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 
 ## Percurso — Ida a Covilhã (15 agosto)
 
 {{< mapa gpx="ida.gpx" >}}
 
-* Saída de Ferreiros/Braga
-* Paragem VNF, pequeno almoço
-* Paragem Guinfões, Douro
-* Paragem Almoço no Martelo, Viseu
-* Paragem Seia, Refresco
+* Saída de Ferreiros - Braga.
+* Paragem em VNF para pequeno almoço.
+* Paragem Guinfões do Douro para esticar os músculos.
+* Paragem no Martelo, Viseu, para almoçar.
+* Paragem Seia, para um refresco = gelado.
 * Paragem na Torre (Serra da Estrela)
-* Chegada Hotel, Tranca da Barriga
+* Chegada Hotel Tranca da Barriga, na Covilhã.
 
 ## Percurso — Regresso da Covilhã (16 agosto)
 
