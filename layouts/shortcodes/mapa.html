@@ -1,5 +1,10 @@
-{{- $gpx := .Get "gpx" -}}
-{{- $id := printf "mapa-%s" (substr (md5 $gpx) 0 8) -}}
+{{- $gpxName := .Get "gpx" -}}
+{{- $gpxRes := .Page.Resources.GetMatch $gpxName -}}
+{{- $gpxURL := printf "%s%s" .Page.Permalink $gpxName -}}
+{{- with $gpxRes -}}
+  {{- $gpxURL = .Permalink -}}
+{{- end -}}
+{{- $id := printf "mapa-%s" (substr (md5 $gpxName) 0 8) -}}
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <div id="{{ $id }}" style="width:100%;height:420px;border-radius:8px;margin:1.5em 0;"></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -10,7 +15,7 @@
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
-  new L.GPX("{{ $gpx | absURL }}", {
+  new L.GPX("{{ $gpxURL }}", {
     async: true,
     marker_options: {
       startIconUrl: null,
