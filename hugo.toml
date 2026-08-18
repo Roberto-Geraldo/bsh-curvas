@@ -56,3 +56,7 @@ pygmentsUseClasses = true
       unsafe = true
   [markup.highlight]
     noClasses = false
+
+[[cascade]]
+  [cascade.params]
+    robotsNoIndex = true
