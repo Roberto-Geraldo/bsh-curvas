@@ -10,13 +10,13 @@ params:
   partida: Ferreiros - BRG
   chegada: Tranca da Barriga - Covilhã
 fotos:
+  - foto17.jpeg
   - foto21.jpeg
   - foto01.jpeg
   - foto02.jpeg
   - foto03.jpeg
   - foto04.jpeg
   - foto05.jpeg
-  - foto06.jpeg
   - foto07.jpeg
   - foto08.jpeg
   - foto09.jpeg
@@ -27,7 +27,6 @@ fotos:
   - foto14.jpeg
   - foto15.jpeg
   - foto16.jpeg
-  - foto17.jpeg
   - foto18.jpeg
   - foto19.jpeg
   - foto20.jpeg
