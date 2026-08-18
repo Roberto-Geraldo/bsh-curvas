@@ -1,6 +1,6 @@
 baseURL = 'https://roberto-geraldo.github.io/bsh-cuvas/'
 languageCode = 'pt-PT'
-title = 'BSH@Cuvas'
+title = 'BSH@Curvas'
 theme = 'PaperMod'
 
 paginate = 10
@@ -13,7 +13,7 @@ pygmentsUseClasses = true
 
 [params]
   env = 'production'
-  title = 'BSH@Cuvas'
+  title = 'BSH@Curvas'
   description = 'Aventuras de moto — percursos, datas e fotos'
   keywords = ['moto', 'motard', 'aventuras', 'percursos']
   author = 'Roberto Geraldo'
@@ -31,7 +31,7 @@ pygmentsUseClasses = true
   hideFooter = false
 
   [params.homeInfoParams]
-    Title = "BSH@Cuvas"
+    Title = "BSH@Curvas"
     Content = "Registo das minhas aventuras de moto — percursos, datas e fotos de cada viagem."
 
   [[params.socialIcons]]
