@@ -1,0 +1,58 @@
+baseURL = 'https://roberto-geraldo.github.io/bsh-cuvas/'
+languageCode = 'pt-PT'
+title = 'BSH@Cuvas'
+theme = 'PaperMod'
+
+paginate = 10
+enableRobotsTXT = true
+enableEmoji = false
+pygmentsUseClasses = true
+
+[minify]
+  disableXML = true
+
+[params]
+  env = 'production'
+  title = 'BSH@Cuvas'
+  description = 'Aventuras de moto — percursos, datas e fotos'
+  keywords = ['moto', 'motard', 'aventuras', 'percursos']
+  author = 'Roberto Geraldo'
+  DateFormat = '02-01-2006'
+  defaultTheme = 'dark'
+  disableThemeToggle = false
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowRssButtonInSectionTermList = false
+  ShowToc = false
+  comments = false
+  hideFooter = false
+
+  [params.homeInfoParams]
+    Title = "BSH@Cuvas"
+    Content = "Registo das minhas aventuras de moto — percursos, datas e fotos de cada viagem."
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Roberto-Geraldo"
+
+[[menu.main]]
+  identifier = 'aventuras'
+  name = 'Aventuras'
+  url = '/aventuras/'
+  weight = 10
+
+[[menu.main]]
+  identifier = 'sobre'
+  name = 'Sobre'
+  url = '/sobre/'
+  weight = 20
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
