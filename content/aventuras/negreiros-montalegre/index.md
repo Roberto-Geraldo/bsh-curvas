@@ -15,8 +15,21 @@ Coloca `percurso.gpx` nesta pasta (`content/aventuras/negreiros-montalegre/`) e 
 
 {{< mapa gpx="percurso.gpx" >}}
 
-Coloca as fotos desta viagem na mesma pasta e referencia-as em markdown:
+## Fotos
 
-```
-![Descrição da foto](foto1.jpg)
-```
+![foto 01](foto01.jpeg)
+![foto 02](foto02.jpeg)
+![foto 03](foto03.jpeg)
+![foto 04](foto04.jpeg)
+![foto 05](foto05.jpeg)
+![foto 06](foto06.jpeg)
+![foto 07](foto07.jpeg)
+![foto 08](foto08.jpeg)
+![foto 09](foto09.jpeg)
+![foto 10](foto10.jpeg)
+![foto 11](foto11.jpeg)
+![foto 12](foto12.jpeg)
+![foto 13](foto13.jpeg)
+![foto 14](foto14.jpeg)
+![foto 15](foto15.jpeg)
+![foto 16](foto16.jpeg)
