@@ -13,8 +13,8 @@ fotos:
   - foto17.jpeg
   - foto22.jpeg
   - foto21.jpeg
-  - foto02.jpeg
   - foto03.jpeg
+  - foto02.jpeg
   - foto04.jpeg
   - foto05.jpeg
   - foto07.jpeg
