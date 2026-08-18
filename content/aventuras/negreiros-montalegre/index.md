@@ -33,3 +33,13 @@ Coloca `percurso.gpx` nesta pasta (`content/aventuras/negreiros-montalegre/`) e 
 ![foto 14](foto14.jpeg)
 ![foto 15](foto15.jpeg)
 ![foto 16](foto16.jpeg)
+
+## Vídeos
+
+<video controls style="width:100%;border-radius:8px;margin:0.5em 0;">
+  <source src="video01.mp4" type="video/mp4">
+</video>
+
+<video controls style="width:100%;border-radius:8px;margin:0.5em 0;">
+  <source src="video02.mp4" type="video/mp4">
+</video>
