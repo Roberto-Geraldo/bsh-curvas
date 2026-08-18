@@ -66,6 +66,14 @@ Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 
 {{< mapa gpx="ida.gpx" >}}
 
+* Saída de Ferreiros/Braga
+* Paragem VNF, pequeno almoço
+* Paragem Guinfões, Douro
+* Paragem Almoço no Martelo, Viseu
+* Paragem Seia, Refresco
+* Paragem na Torre (Serra da Estrela)
+* Chegada Hotel, Tranca da Barriga
+
 ## Percurso — Regresso da Covilhã (16 agosto)
 
 {{< mapa gpx="regresso.gpx" >}}
