@@ -1,7 +1,13 @@
+{{- $images := slice -}}
 {{- range .Page.Params.fotos -}}
   {{- $name := . -}}
   {{- $res := $.Page.Resources.GetMatch $name -}}
   {{- $src := $name -}}
   {{- with $res -}}{{- $src = .RelPermalink -}}{{- end -}}
-  <img src="{{ $src }}" alt="{{ $name }}" loading="lazy" style="max-width:100%;border-radius:8px;margin:0.4em 0;display:block;">
+  {{- $images = $images | append $src -}}
 {{- end -}}
+<div class="fotos-galeria">
+{{- range $images }}
+  <img src="{{ . }}" alt="foto" loading="lazy" style="max-width:100%;border-radius:8px;margin:0.4em 0;display:block;cursor:zoom-in;">
+{{- end }}
+</div>
