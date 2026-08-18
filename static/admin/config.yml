@@ -1,0 +1,47 @@
+backend:
+  name: github
+  repo: Roberto-Geraldo/bsh-curvas
+  branch: main
+  base_url: https://bsh-curvas-oauth.bsh-curvas-oauth.workers.dev
+  auth_endpoint: auth
+
+site_url: https://roberto-geraldo.github.io/bsh-curvas/
+display_url: https://roberto-geraldo.github.io/bsh-curvas/
+publish_mode: simple
+media_folder: ""
+public_folder: ""
+
+collections:
+  - name: "aventuras"
+    label: "Aventuras"
+    label_singular: "Passeio"
+    folder: "content/aventuras"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - label: "Detalhes"
+        name: "params"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Distância", name: "distancia", widget: "string", required: false }
+          - { label: "Duração", name: "duracao", widget: "string", required: false }
+          - { label: "Partida", name: "partida", widget: "string", required: false }
+          - { label: "Chegada", name: "chegada", widget: "string", required: false }
+      - { label: "Texto", name: "body", widget: "markdown" }
+
+  - name: "sobre"
+    label: "Sobre"
+    files:
+      - label: "Página Sobre"
+        name: "sobre"
+        file: "content/sobre.md"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Texto", name: "body", widget: "markdown" }
