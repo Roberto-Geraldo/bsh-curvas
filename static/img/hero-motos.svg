@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e2b4d"/>
+      <stop offset="100%" stop-color="#3a2a4d"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1f2e"/>
+      <stop offset="100%" stop-color="#0b0e16"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="500" fill="url(#sky)"/>
+  <circle cx="600" cy="230" r="90" fill="url(#sun)" opacity="0.85"/>
+
+  <!-- mountains -->
+  <path d="M0,340 L140,220 L260,320 L380,190 L520,330 L640,240 L760,340 L900,210 L1040,330 L1200,250 L1200,500 L0,500 Z" fill="#141b2e" opacity="0.9"/>
+  <path d="M0,380 L180,300 L340,370 L480,280 L640,380 L820,290 L980,380 L1200,320 L1200,500 L0,500 Z" fill="#0c1120"/>
+
+  <!-- road -->
+  <path d="M420,500 C480,400 500,360 600,360 C700,360 720,400 780,500 Z" fill="url(#road)"/>
+  <path d="M585,500 C592,430 596,400 600,375" stroke="#d97706" stroke-width="6" stroke-dasharray="18 16" fill="none" opacity="0.7"/>
+
+  <!-- bike group: adventure (V-Strom style) -->
+  <g transform="translate(330,430) scale(1.35)" fill="#f97316">
+    <ellipse cx="0" cy="34" rx="46" ry="46" fill="#0b0e16" stroke="#f97316" stroke-width="3"/>
+    <ellipse cx="86" cy="34" rx="46" ry="46" fill="#0b0e16" stroke="#f97316" stroke-width="3"/>
+    <path d="M0,34 L28,-4 L64,-4 L86,34" stroke="#f97316" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M28,-4 L20,-40 L44,-52 L54,-30 L64,-4" fill="#f97316"/>
+    <rect x="30" y="-58" width="10" height="22" rx="3" transform="rotate(-8 35 -47)"/>
+    <path d="M62,4 C50,-6 34,-6 18,6" stroke="#f97316" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <circle cx="30" cy="-16" r="5"/>
+  </g>
+
+  <!-- bike group: adventure compact (NX500 style) -->
+  <g transform="translate(600,460) scale(1.12)" fill="#fb923c">
+    <ellipse cx="0" cy="34" rx="42" ry="42" fill="#0b0e16" stroke="#fb923c" stroke-width="3"/>
+    <ellipse cx="80" cy="34" rx="42" ry="42" fill="#0b0e16" stroke="#fb923c" stroke-width="3"/>
+    <path d="M0,34 L26,0 L58,0 L80,34" stroke="#fb923c" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M26,0 L18,-30 L38,-40 L48,-22 L58,0" fill="#fb923c"/>
+    <rect x="28" y="-44" width="8" height="16" rx="3" transform="rotate(-6 32 -36)"/>
+    <path d="M56,8 C46,-2 30,-2 16,8" stroke="#fb923c" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <circle cx="28" cy="-10" r="4"/>
+  </g>
+
+  <!-- bike group: tourer (R1200RT style, full fairing + top box) -->
+  <g transform="translate(850,410) scale(1.5)" fill="#fdba74">
+    <ellipse cx="0" cy="34" rx="46" ry="46" fill="#0b0e16" stroke="#fdba74" stroke-width="3"/>
+    <ellipse cx="92" cy="34" rx="46" ry="46" fill="#0b0e16" stroke="#fdba74" stroke-width="3"/>
+    <path d="M18,34 C18,4 40,-14 68,-8 C86,-4 92,14 92,34" fill="#fdba74" opacity="0.95"/>
+    <rect x="14" y="-34" width="12" height="26" rx="4" transform="rotate(-4 20 -21)"/>
+    <rect x="30" y="-2" width="30" height="18" rx="6" fill="#0b0e16" stroke="#fdba74" stroke-width="2"/>
+    <path d="M18,34 C6,26 -4,26 -14,34" stroke="#fdba74" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- foreground fade -->
+  <rect x="0" y="420" width="1200" height="80" fill="#0f172a" opacity="0.35"/>
+</svg>
