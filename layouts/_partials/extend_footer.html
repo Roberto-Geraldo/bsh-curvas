@@ -53,4 +53,8 @@
     }
   });
 })();
+
+document.addEventListener('DOMContentLoaded', function () {
+  (window.__mapaQueue || []).forEach(function (fn) { fn(); });
+});
 </script>
