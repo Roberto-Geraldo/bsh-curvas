@@ -14,7 +14,7 @@ pygmentsUseClasses = true
 [params]
   env = 'production'
   title = 'BSH@Curvas'
-  description = 'Aventuras de moto — percursos, datas e fotos'
+  description = 'Grupo de amigos casais na crise dos 50 a aproveitar a vida — aventuras de moto, percursos, datas e fotos'
   keywords = ['moto', 'motard', 'aventuras', 'percursos']
   author = 'Roberto Geraldo'
   DateFormat = '02-01-2006'
@@ -32,7 +32,7 @@ pygmentsUseClasses = true
 
   [params.homeInfoParams]
     Title = "BSH@Curvas"
-    Content = "Registo das minhas aventuras de moto — percursos, datas e fotos de cada viagem."
+    Content = "Grupo de amigos casais na crise dos 50 a fugir da meia-idade a duas rodas. Aqui ficam os percursos, as datas e as fotos das aventuras."
 
   [[params.socialIcons]]
     name = "github"
