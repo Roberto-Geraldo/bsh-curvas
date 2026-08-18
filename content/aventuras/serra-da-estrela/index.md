@@ -36,7 +36,6 @@ fotos:
   - foto25.jpeg
   - foto26.jpeg
   - foto30.jpeg
-  - foto32.jpeg
   - foto33.jpeg
   - foto35.jpeg
   - foto39.jpeg
@@ -52,6 +51,7 @@ fotos:
   - foto44.jpeg
   - foto46.jpg
   - foto47.jpg
+  - foto32.jpeg
   - foto48.jpg
   - foto49.jpg
   - foto50.jpg
