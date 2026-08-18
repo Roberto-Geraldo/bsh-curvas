@@ -12,7 +12,6 @@ params:
 fotos:
   - foto17.jpeg
   - foto18.jpeg
-  - foto22.jpeg
   - foto21.jpeg
   - foto19.jpeg
   - foto23.jpeg
