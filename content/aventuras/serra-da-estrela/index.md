@@ -11,8 +11,11 @@ params:
   chegada: Tranca da Barriga - Covilhã
 fotos:
   - foto17.jpeg
+  - foto18.jpeg
   - foto22.jpeg
   - foto21.jpeg
+  - foto19.jpeg
+  - foto23.jpeg
   - foto03.jpeg
   - foto02.jpeg
   - foto04.jpeg
@@ -28,11 +31,8 @@ fotos:
   - foto14.jpeg
   - foto15.jpeg
   - foto16.jpeg
-  - foto18.jpeg
-  - foto19.jpeg
   - foto20.jpeg
   - foto45.jpg
-  - foto23.jpeg
   - foto43.jpeg
   - foto24.jpeg
   - foto25.jpeg
