@@ -30,7 +30,6 @@ fotos:
   - foto14.jpeg
   - foto15.jpeg
   - foto16.jpeg
-  - foto20.jpeg
   - foto45.jpg
   - foto43.jpeg
   - foto24.jpeg
