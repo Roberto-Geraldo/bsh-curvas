@@ -11,9 +11,13 @@ params:
 
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 
-Coloca `percurso.gpx` nesta pasta (`content/aventuras/serra-da-estrela/`) e ativa o mapa:
+## Percurso — Ida a Covilhã (15 agosto)
 
-{{< mapa gpx="percurso.gpx" >}}
+{{< mapa gpx="ida.gpx" >}}
+
+## Percurso — Regresso da Covilhã (16 agosto)
+
+{{< mapa gpx="regresso.gpx" >}}
 
 Coloca as fotos desta viagem na mesma pasta e referencia-as em markdown:
 
