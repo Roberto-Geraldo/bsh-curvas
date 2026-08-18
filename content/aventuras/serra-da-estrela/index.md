@@ -5,8 +5,8 @@ tags: ["Serra da Estrela", "2 dias"]
 params:
   distancia: ""
   duracao: "15 e 16 de agosto de 2026"
-  partida: "Arcozelo"
-  chegada: "Serra da Estrela"
+  partida: "Ferreiros - BRG"
+  chegada: "Tranca da Barriga - Covilhã"
 ---
 
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
