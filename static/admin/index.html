@@ -4,11 +4,155 @@
   <meta charset="utf-8" />
   <meta name="robots" content="noindex" />
   <title>BSH@Curvas — Admin</title>
-  <link href="config.yml?v=3" type="text/yaml" rel="cms-config-url">
+  <link href="config.yml?v=4" type="text/yaml" rel="cms-config-url">
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
+    function fotosToArray(val) {
+      if (!val) return [];
+      if (val.toJS) return val.toJS();
+      if (Array.isArray(val)) return val.slice();
+      return Array.prototype.slice.call(val);
+    }
+
+    var FotosControl = createClass({
+      getInitialState: function () {
+        return { mode: 'list' };
+      },
+      setMode: function (m) {
+        this.setState({ mode: m });
+      },
+      move: function (from, to) {
+        var arr = fotosToArray(this.props.value);
+        if (to < 0 || to >= arr.length) return;
+        var tmp = arr[from];
+        arr[from] = arr[to];
+        arr[to] = tmp;
+        this.props.onChange(arr);
+      },
+      remove: function (i) {
+        var arr = fotosToArray(this.props.value);
+        arr.splice(i, 1);
+        this.props.onChange(arr);
+      },
+      addPhotos: function () {
+        var self = this;
+        this.props.onOpenMediaLibrary({
+          forImage: true,
+          allowMultiple: true,
+          value: undefined,
+          onChange: function (selected) {
+            var arr = fotosToArray(self.props.value);
+            var newOnes = [];
+            if (Array.isArray(selected)) newOnes = selected;
+            else if (selected && selected.toJS) newOnes = selected.toJS();
+            else if (selected) newOnes = [selected];
+            self.props.onChange(arr.concat(newOnes));
+          }
+        });
+      },
+      render: function () {
+        var self = this;
+        var arr = fotosToArray(this.props.value);
+        var mode = this.state.mode;
+
+        var items = arr.map(function (path, i) {
+          var src = path;
+          try { src = self.props.getAsset(path).toString(); } catch (e) {}
+
+          var thumb = h('img', {
+            src: src,
+            style: mode === 'grid'
+              ? { width: '100%', height: '100%', objectFit: 'cover' }
+              : { width: '56px', height: '56px', objectFit: 'cover', borderRadius: '4px', marginRight: '10px' }
+          });
+
+          var removeBtn = h('button', {
+            type: 'button',
+            onClick: function () { self.remove(i); },
+            style: { cursor: 'pointer' }
+          }, '×');
+
+          if (mode === 'grid') {
+            return h('div', { key: i, style: { width: '110px' } }, [
+              h('div', {
+                style: {
+                  position: 'relative', width: '110px', height: '110px',
+                  background: '#222', borderRadius: '6px', overflow: 'hidden'
+                }
+              }, [
+                thumb,
+                h('span', {
+                  style: {
+                    position: 'absolute', top: '4px', left: '4px',
+                    background: 'rgba(0,0,0,.65)', color: '#fff', fontSize: '11px',
+                    padding: '1px 5px', borderRadius: '3px'
+                  }
+                }, '#' + (i + 1))
+              ]),
+              h('div', { style: { display: 'flex', justifyContent: 'space-between', marginTop: '4px' } }, [
+                h('button', { type: 'button', onClick: function () { self.move(i, i - 1); }, disabled: i === 0 }, '◀'),
+                removeBtn,
+                h('button', { type: 'button', onClick: function () { self.move(i, i + 1); }, disabled: i === arr.length - 1 }, '▶')
+              ])
+            ]);
+          }
+
+          return h('div', {
+            key: i,
+            style: { display: 'flex', alignItems: 'center', padding: '6px 0', borderBottom: '1px solid #ddd' }
+          }, [
+            thumb,
+            h('span', { style: { flex: 1, fontFamily: 'monospace', fontSize: '13px' } }, '#' + (i + 1) + ' ' + path),
+            h('button', { type: 'button', onClick: function () { self.move(i, i - 1); }, disabled: i === 0, style: { marginRight: '4px' } }, '↑'),
+            h('button', { type: 'button', onClick: function () { self.move(i, i + 1); }, disabled: i === arr.length - 1, style: { marginRight: '4px' } }, '↓'),
+            removeBtn
+          ]);
+        });
+
+        return h('div', {}, [
+          h('div', { style: { display: 'flex', gap: '8px', marginBottom: '10px', alignItems: 'center' } }, [
+            h('button', {
+              type: 'button', onClick: function () { self.setMode('list'); },
+              style: { fontWeight: mode === 'list' ? 'bold' : 'normal' }
+            }, 'Lista'),
+            h('button', {
+              type: 'button', onClick: function () { self.setMode('grid'); },
+              style: { fontWeight: mode === 'grid' ? 'bold' : 'normal' }
+            }, 'Miniaturas'),
+            h('button', { type: 'button', onClick: this.addPhotos, style: { marginLeft: 'auto' } }, '+ Adicionar fotos')
+          ]),
+          mode === 'grid'
+            ? h('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '10px' } }, items)
+            : h('div', {}, items)
+        ]);
+      }
+    });
+
+    var FotosPreview = createClass({
+      render: function () {
+        var self = this;
+        var arr = fotosToArray(this.props.value);
+        return h('div', { style: { display: 'flex', flexWrap: 'wrap', gap: '8px' } }, arr.map(function (path, i) {
+          var src = path;
+          try { src = self.props.getAsset(path).toString(); } catch (e) {}
+          return h('div', { key: i, style: { position: 'relative', width: '100px', height: '100px' } }, [
+            h('img', { src: src, style: { width: '100%', height: '100%', objectFit: 'cover', borderRadius: '4px' } }),
+            h('span', {
+              style: {
+                position: 'absolute', top: '2px', left: '2px',
+                background: 'rgba(0,0,0,.6)', color: '#fff', fontSize: '10px',
+                padding: '1px 4px', borderRadius: '3px'
+              }
+            }, '#' + (i + 1))
+          ]);
+        }));
+      }
+    });
+
+    CMS.registerWidget('fotos-galeria', FotosControl, FotosPreview);
+
     var AventurasPreview = createClass({
       render: function () {
         var entry = this.props.entry;

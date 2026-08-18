@@ -35,11 +35,7 @@ collections:
           - { label: "Partida", name: "partida", widget: "string", required: false }
           - { label: "Chegada", name: "chegada", widget: "string", required: false }
       - { label: "Texto", name: "body", widget: "markdown" }
-      - label: "Fotos"
-        name: "fotos"
-        widget: "list"
-        required: false
-        field: { label: "Foto", name: "foto", widget: "image" }
+      - { label: "Fotos", name: "fotos", widget: "fotos-galeria", required: false }
 
   - name: "sobre"
     label: "Sobre"
