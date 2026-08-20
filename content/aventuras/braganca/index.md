@@ -27,8 +27,6 @@ fotos:
 
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 
-Coloca `percurso.gpx` nesta pasta (`content/aventuras/braganca/`) e ativa o mapa:
-
 {{< mapa gpx="percurso.gpx" >}}
 
 ## Fotos
