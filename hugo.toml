@@ -45,6 +45,12 @@ pygmentsUseClasses = true
   weight = 10
 
 [[menu.main]]
+  identifier = 'mapa-geral'
+  name = 'Mapa Geral'
+  url = '/mapa-geral/'
+  weight = 15
+
+[[menu.main]]
   identifier = 'sobre'
   name = 'Sobre'
   url = '/sobre/'

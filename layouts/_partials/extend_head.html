@@ -1,4 +1,4 @@
-{{- if eq .Section "aventuras" }}
+{{- if or (eq .Section "aventuras") .Params.mapa }}
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 <script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js" defer></script>

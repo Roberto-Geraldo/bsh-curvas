@@ -1,0 +1,47 @@
+{{- $aventuras := (where site.RegularPages "Section" "aventuras").ByDate.Reverse -}}
+{{- $palette := slice "#e6194b" "#3cb44b" "#4363d8" "#f58231" "#911eb4" "#42d4f4" "#f032e6" "#bfef45" "#fabed4" "#469990" "#9A6324" "#800000" -}}
+{{- $rotas := slice -}}
+{{- range $i, $p := $aventuras -}}
+  {{- $gpxs := $p.Resources.Match "*.gpx" -}}
+  {{- if gt (len $gpxs) 0 -}}
+    {{- $cor := index $palette (mod $i (len $palette)) -}}
+    {{- $urls := slice -}}
+    {{- range $gpxs -}}{{- $urls = $urls | append .Permalink -}}{{- end -}}
+    {{- $rotas = $rotas | append (dict "titulo" $p.Title "link" $p.Permalink "cor" $cor "gpx" $urls) -}}
+  {{- end -}}
+{{- end -}}
+<div id="mapa-geral" style="width:100%;height:520px;border-radius:8px;margin:1em 0;background:#111;"></div>
+<ul class="mapa-geral-legenda" style="list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:0.8em 1.4em;margin:1em 0;">
+{{- range $rotas }}
+  <li><a href="{{ .link }}" style="display:flex;align-items:center;gap:0.4em;text-decoration:none;">
+    <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:{{ .cor }};flex:none;"></span>
+    {{ .titulo }}
+  </a></li>
+{{- end }}
+</ul>
+<script>
+(window.__mapaQueue = window.__mapaQueue || []).push(function () {
+  var map = L.map("mapa-geral").setView([40.2, -7.3], 7);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+  var grupo = L.featureGroup().addTo(map);
+  var rotas = {{ $rotas | jsonify }};
+  var pendentes = 0;
+  rotas.forEach(function (rota) {
+    rota.gpx.forEach(function (url) {
+      pendentes++;
+      new L.GPX(url, {
+        async: true,
+        polyline_options: { color: rota.cor, weight: 3, opacity: 0.85 },
+        marker_options: { startIconUrl: null, endIconUrl: null, shadowUrl: null }
+      }).on("loaded", function (e) {
+        e.target.bindPopup('<a href="' + rota.link + '">' + rota.titulo + '</a>');
+        grupo.addLayer(e.target);
+        pendentes--;
+        if (pendentes === 0 && grupo.getBounds().isValid()) { map.fitBounds(grupo.getBounds()); }
+      }).addTo(map);
+    });
+  });
+});
+</script>
