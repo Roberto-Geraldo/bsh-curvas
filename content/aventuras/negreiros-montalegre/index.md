@@ -24,11 +24,16 @@ fotos:
   - foto14.jpeg
   - foto15.jpeg
   - foto16.jpeg
+paragens: []
 ---
 
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 
 {{< mapa gpx="percurso.gpx" >}}
+
+## Onde paramos
+
+{{< paragens >}}
 
 ## Fotos
 

@@ -55,6 +55,7 @@ fotos:
   - foto48.jpg
   - foto49.jpg
   - foto50.jpg
+paragens: []
 ---
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 
@@ -73,6 +74,10 @@ Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 ## Percurso — Regresso da Covilhã (16 agosto)
 
 {{< mapa gpx="regresso.gpx" >}}
+
+## Onde paramos
+
+{{< paragens >}}
 
 ## Fotos
 

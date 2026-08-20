@@ -1,0 +1,13 @@
+{{- $icones := dict "Tasca" "🍽️" "Restaurante" "🍽️" "Café" "☕" "Miradouro" "📷" "Outro" "📍" -}}
+<ul class="paragens-lista" style="list-style:none;padding:0;margin:1.5em 0;">
+{{- range .Page.Params.paragens }}
+  <li style="display:flex;gap:0.6em;align-items:flex-start;padding:0.5em 0;border-bottom:1px solid var(--border);">
+    <span>{{ index $icones .tipo | default "📍" }}</span>
+    <span>
+      <strong>{{ .nome }}</strong>
+      {{- with .tipo }} <span style="opacity:0.6;">— {{ . }}</span>{{ end -}}
+      {{- with .comentario }}<br>{{ . }}{{ end -}}
+    </span>
+  </li>
+{{- end }}
+</ul>

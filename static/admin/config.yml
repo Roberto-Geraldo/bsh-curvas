@@ -36,6 +36,18 @@ collections:
           - { label: "Chegada", name: "chegada", widget: "string", required: false }
       - { label: "Texto", name: "body", widget: "markdown" }
       - { label: "Fotos", name: "fotos", widget: "fotos-galeria", required: false }
+      - label: "Paragens (tascas, restaurantes, locais)"
+        name: "paragens"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Nome", name: "nome", widget: "string" }
+          - label: "Tipo"
+            name: "tipo"
+            widget: "select"
+            default: "Tasca"
+            options: ["Tasca", "Restaurante", "Café", "Miradouro", "Outro"]
+          - { label: "Comentário", name: "comentario", widget: "text", required: false }
 
   - name: "sobre"
     label: "Sobre"
