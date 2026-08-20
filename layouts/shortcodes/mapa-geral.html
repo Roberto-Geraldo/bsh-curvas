@@ -26,7 +26,7 @@
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
   var grupo = L.featureGroup().addTo(map);
-  var rotas = {{ $rotas | jsonify }};
+  var rotas = {{ $rotas | jsonify | safeJS }};
   var pendentes = 0;
   rotas.forEach(function (rota) {
     rota.gpx.forEach(function (url) {
