@@ -58,7 +58,7 @@ fotos:
 paragens:
   - nome: "O Martelo"
     tipo: "Restaurante"
-    comentario: "Viseu, almoço na ida"
+    comentario: "Viseu, 15/08/2026 (Ida Serra da Estrela)"
     morada: "Falorca de Silgueiros, 3500-534 Viseu"
     contacto: "232958884"
     facebook: "https://www.facebook.com/RestauranteMartelo/"
