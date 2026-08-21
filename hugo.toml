@@ -51,6 +51,12 @@ pygmentsUseClasses = true
   weight = 15
 
 [[menu.main]]
+  identifier = 'tascas'
+  name = 'Tascas'
+  url = '/tascas/'
+  weight = 18
+
+[[menu.main]]
   identifier = 'sobre'
   name = 'Sobre'
   url = '/sobre/'

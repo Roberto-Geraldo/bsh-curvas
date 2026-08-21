@@ -24,7 +24,10 @@ fotos:
   - foto14.jpeg
   - foto15.jpeg
   - foto16.jpeg
-paragens: []
+paragens:
+  - nome: "As 7 Maravilhas"
+    tipo: "Restaurante"
+    comentario: "Negrões, Montalegre"
 ---
 
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.

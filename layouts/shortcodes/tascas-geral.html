@@ -1,0 +1,27 @@
+{{- $icones := dict "Tasca" "🍽️" "Restaurante" "🍽️" "Café" "☕" -}}
+{{- $aventuras := (where site.RegularPages "Section" "aventuras").ByDate.Reverse -}}
+{{- $sitios := slice -}}
+{{- range $aventuras -}}
+  {{- $p := . -}}
+  {{- range .Params.paragens -}}
+    {{- if in (slice "Tasca" "Restaurante" "Café") .tipo -}}
+      {{- $sitios = $sitios | append (dict "nome" .nome "tipo" .tipo "comentario" .comentario "aventura" $p.Title "url" $p.RelPermalink) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+<ul class="paragens-lista" style="list-style:none;padding:0;margin:1.5em 0;">
+{{- range $sitios }}
+  <li style="display:flex;gap:0.6em;align-items:flex-start;padding:0.5em 0;border-bottom:1px solid var(--border);">
+    <span>{{ index $icones .tipo | default "📍" }}</span>
+    <span>
+      <strong>{{ .nome }}</strong>
+      {{- with .tipo }} <span style="opacity:0.6;">— {{ . }}</span>{{ end -}}
+      {{- with .comentario }}<br>{{ . }}{{ end -}}
+      <br><a href="{{ .url }}" style="opacity:0.7;">{{ .aventura }}</a>
+    </span>
+  </li>
+{{- end }}
+</ul>
+{{- if eq (len $sitios) 0 }}
+<p style="opacity:0.6;">Ainda sem tascas/restaurantes registados. Adiciona em <code>paragens</code> no front matter de cada aventura.</p>
+{{- end }}
