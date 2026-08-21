@@ -5,12 +5,18 @@
   {{- $p := . -}}
   {{- range .Params.paragens -}}
     {{- if in (slice "Tasca" "Restaurante" "Café") .tipo -}}
-      {{- $sitios = $sitios | append (dict "nome" .nome "tipo" .tipo "comentario" .comentario "morada" .morada "contacto" .contacto "site" .site "facebook" .facebook "instagram" .instagram "aventura" $p.Title "url" $p.RelPermalink) -}}
+      {{- $sitios = $sitios | append (dict "nome" .nome "tipo" .tipo "comentario" .comentario "morada" .morada "contacto" .contacto "site" .site "facebook" .facebook "instagram" .instagram "tripadvisor" .tripadvisor "aventura" $p.Title "url" $p.RelPermalink) -}}
     {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- range where site.RegularPages "Section" "restaurantes" -}}
+  {{- if in (slice "Tasca" "Restaurante" "Café") .Params.tipo -}}
+    {{- $sitios = $sitios | append (dict "nome" .Title "tipo" .Params.tipo "comentario" .Params.comentario "morada" .Params.morada "contacto" .Params.contacto "site" .Params.site "facebook" .Params.facebook "instagram" .Params.instagram "tripadvisor" .Params.tripadvisor "aventura" "" "url" "") -}}
   {{- end -}}
 {{- end -}}
 <ul class="paragens-lista" style="list-style:none;padding:0;margin:1.5em 0;">
 {{- range $sitios }}
+  {{- $item := . }}
   <li style="display:flex;gap:0.6em;align-items:flex-start;padding:0.5em 0;border-bottom:1px solid var(--border);">
     <span>{{ index $icones .tipo | default "📍" }}</span>
     <span>
@@ -18,7 +24,7 @@
       {{- with .tipo }} <span style="opacity:0.6;">— {{ . }}</span>{{ end -}}
       {{ partial "paragem-info.html" . }}
       {{- with .comentario }}<br>{{ . }}{{ end -}}
-      <br><a href="{{ .url }}" style="opacity:0.7;">{{ .aventura }}</a>
+      {{- with $item.aventura }}<br><a href="{{ $item.url }}" style="opacity:0.7;">{{ . }}</a>{{ end -}}
     </span>
   </li>
 {{- end }}

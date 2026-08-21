@@ -55,6 +55,30 @@ collections:
           - { label: "Instagram", name: "instagram", widget: "string", required: false }
           - { label: "Tripadvisor", name: "tripadvisor", widget: "string", required: false }
 
+  - name: "restaurantes"
+    label: "Restaurantes"
+    label_singular: "Restaurante"
+    folder: "content/restaurantes"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Nome", name: "title", widget: "string" }
+      - label: "Tipo"
+        name: "tipo"
+        widget: "select"
+        default: "Restaurante"
+        options: ["Tasca", "Restaurante", "Café", "Miradouro", "Outro"]
+      - { label: "Comentário", name: "comentario", widget: "text", required: false }
+      - { label: "Morada", name: "morada", widget: "string", required: false }
+      - { label: "Contacto", name: "contacto", widget: "string", required: false }
+      - { label: "Site", name: "site", widget: "string", required: false }
+      - { label: "Facebook", name: "facebook", widget: "string", required: false }
+      - { label: "Instagram", name: "instagram", widget: "string", required: false }
+      - { label: "Tripadvisor", name: "tripadvisor", widget: "string", required: false }
+
   - name: "sobre"
     label: "Sobre"
     files:
