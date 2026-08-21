@@ -55,7 +55,10 @@ fotos:
   - foto48.jpg
   - foto49.jpg
   - foto50.jpg
-paragens: []
+paragens:
+  - nome: "O Martelo"
+    tipo: "Restaurante"
+    comentario: "Viseu, almoço na ida"
 ---
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 
