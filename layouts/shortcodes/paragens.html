@@ -6,6 +6,7 @@
     <span>
       <strong>{{ .nome }}</strong>
       {{- with .tipo }} <span style="opacity:0.6;">— {{ . }}</span>{{ end -}}
+      {{ partial "paragem-info.html" . }}
       {{- with .comentario }}<br>{{ . }}{{ end -}}
     </span>
   </li>

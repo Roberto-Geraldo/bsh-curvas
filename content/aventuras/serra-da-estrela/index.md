@@ -59,6 +59,10 @@ paragens:
   - nome: "O Martelo"
     tipo: "Restaurante"
     comentario: "Viseu, almoço na ida"
+    morada: "Falorca de Silgueiros, 3500-534 Viseu"
+    contacto: "232958884"
+    facebook: "https://www.facebook.com/RestauranteMartelo/"
+    site: "https://restmartelooficial.weebly.com/"
 ---
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 

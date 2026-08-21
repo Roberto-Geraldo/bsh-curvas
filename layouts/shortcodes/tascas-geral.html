@@ -5,7 +5,7 @@
   {{- $p := . -}}
   {{- range .Params.paragens -}}
     {{- if in (slice "Tasca" "Restaurante" "Café") .tipo -}}
-      {{- $sitios = $sitios | append (dict "nome" .nome "tipo" .tipo "comentario" .comentario "aventura" $p.Title "url" $p.RelPermalink) -}}
+      {{- $sitios = $sitios | append (dict "nome" .nome "tipo" .tipo "comentario" .comentario "morada" .morada "contacto" .contacto "site" .site "facebook" .facebook "instagram" .instagram "aventura" $p.Title "url" $p.RelPermalink) -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
@@ -16,6 +16,7 @@
     <span>
       <strong>{{ .nome }}</strong>
       {{- with .tipo }} <span style="opacity:0.6;">— {{ . }}</span>{{ end -}}
+      {{ partial "paragem-info.html" . }}
       {{- with .comentario }}<br>{{ . }}{{ end -}}
       <br><a href="{{ .url }}" style="opacity:0.7;">{{ .aventura }}</a>
     </span>

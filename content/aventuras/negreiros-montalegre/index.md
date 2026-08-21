@@ -28,6 +28,9 @@ paragens:
   - nome: "As 7 Maravilhas"
     tipo: "Restaurante"
     comentario: "Negrões, Montalegre"
+    morada: "R. Principal 47, Vilarinho de Negrões, 5470-323 Montalegre"
+    contacto: "276010206"
+    site: "https://www.7-maravilhas.com/"
 ---
 
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.

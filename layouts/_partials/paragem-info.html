@@ -1,0 +1,12 @@
+{{- if or .morada .contacto .site .facebook .instagram -}}
+<details style="display:inline-block;margin-left:0.3em;vertical-align:middle;">
+  <summary style="cursor:pointer;display:inline;" title="Mais informação">ℹ️</summary>
+  <div style="margin:0.4em 0 0.2em;padding:0.6em 0.8em;background:rgba(128,128,128,0.08);border-radius:6px;font-size:0.9em;line-height:1.6;">
+    {{- with .morada }}📍 {{ . }}<br>{{ end -}}
+    {{- with .contacto }}📞 <a href="tel:{{ . }}">{{ . }}</a><br>{{ end -}}
+    {{- with .site }}🌐 <a href="{{ . }}" target="_blank" rel="noopener">Site</a><br>{{ end -}}
+    {{- with .facebook }}📘 <a href="{{ . }}" target="_blank" rel="noopener">Facebook</a><br>{{ end -}}
+    {{- with .instagram }}📷 <a href="{{ . }}" target="_blank" rel="noopener">Instagram</a>{{ end -}}
+  </div>
+</details>
+{{- end -}}
