@@ -5,7 +5,7 @@ tags:
   - Serra da Estrela
   - 2 dias
 params:
-  distancia: ""
+  distancia: "619 km"
   duracao: 15 e 16 de agosto de 2026
   partida: Ferreiros - BRG
   chegada: Tranca da Barriga - Covilhã
@@ -63,6 +63,8 @@ Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 
 {{< mapa gpx="ida.gpx" >}}
 
+~270 km
+
 * Saída de Ferreiros - Braga.
 * Paragem em VNF para pequeno almoço.
 * Paragem Guinfões do Douro para esticar os músculos.
@@ -74,6 +76,8 @@ Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 ## Percurso — Regresso da Covilhã (16 agosto)
 
 {{< mapa gpx="regresso.gpx" >}}
+
+~349 km
 
 ## Onde paramos
 
