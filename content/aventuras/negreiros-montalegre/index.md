@@ -3,7 +3,7 @@ title: "Negreiros (Montalegre)"
 date: 2026-06-04
 tags: ["Montalegre", "1 dia"]
 params:
-  distancia: ""
+  distancia: "194 km"
   duracao: "1 dia"
   partida: "Arcozelo"
   chegada: "Negreiros, Montalegre"
@@ -30,6 +30,8 @@ paragens: []
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 
 {{< mapa gpx="percurso.gpx" >}}
+
+~194 km
 
 ## Onde paramos
 

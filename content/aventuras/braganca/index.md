@@ -5,7 +5,7 @@ tags:
   - Bragança
   - 1 dia
 params:
-  distancia: ""
+  distancia: "447 km"
   duracao: 1 dia
   partida: Ferreiros
   chegada: Bragança
@@ -29,6 +29,8 @@ paragens: []
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 
 {{< mapa gpx="percurso.gpx" >}}
+
+~447 km
 
 ## Onde paramos
 
