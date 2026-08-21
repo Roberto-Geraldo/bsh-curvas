@@ -23,7 +23,14 @@ fotos:
   - foto11.jpg
   - foto12.jpeg
   - foto13.jpg
-paragens: []
+paragens:
+  - nome: "Lombada"
+    tipo: "Restaurante"
+    comentario: "Babe, 19/07/2026 (Bragança)"
+    morada: "Bairro de S. Sebastião, nº7, 5300-421 Babe, Bragança"
+    contacto: "273926425"
+    facebook: "https://www.facebook.com/restaurantelombada/"
+    site: "https://restaurantelombada.com/"
 ---
 
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
