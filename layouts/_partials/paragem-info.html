@@ -7,8 +7,11 @@
     {{- if or .site .facebook .instagram .tripadvisor }}
     <span style="display:inline-flex;gap:0.4em;">
       {{- with .site }}<a href="{{ . }}" target="_blank" rel="noopener" title="Site" style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#555;color:#fff;font-size:11px;text-decoration:none;">🌐</a>{{ end -}}
-      {{- with .facebook }}<a href="{{ . }}" title="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#1877F2;color:#fff;font-size:12px;font-weight:700;font-family:Georgia,serif;text-decoration:none;">f</a>{{ end -}}
-      {{- with .instagram }}<a href="{{ . }}" title="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;font-size:9px;font-weight:700;text-decoration:none;">IG</a>{{ end -}}
+      {{- with .facebook }}<a href="fb://facewebmodal/f?href={{ . | urlquery }}" title="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#1877F2;color:#fff;font-size:12px;font-weight:700;font-family:Georgia,serif;text-decoration:none;">f</a>{{ end -}}
+      {{- with .instagram }}
+        {{- $handle := path.Base (strings.TrimSuffix "/" .) -}}
+        <a href="instagram://user?username={{ $handle | urlquery }}" title="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;font-size:9px;font-weight:700;text-decoration:none;">IG</a>
+      {{- end -}}
       {{- with .tripadvisor }}<a href="{{ . }}" target="_blank" rel="noopener" title="Tripadvisor" style="display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#34e0a1;color:#000;font-size:8px;font-weight:700;text-decoration:none;">TA</a>{{ end -}}
     </span>
     {{- end -}}
