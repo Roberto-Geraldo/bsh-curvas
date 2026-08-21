@@ -63,6 +63,8 @@ paragens:
     contacto: "232958884"
     facebook: "https://www.facebook.com/RestauranteMartelo/"
     site: "https://restmartelooficial.weebly.com/"
+    instagram: "https://www.instagram.com/martelorestaurante/"
+    tripadvisor: "https://www.tripadvisor.com/Restaurant_Review-g189149-d6581782-Reviews-Restaurante_o_Martelo-Viseu_Viseu_District_Northern_Portugal.html"
 ---
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
 

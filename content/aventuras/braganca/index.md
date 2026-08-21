@@ -31,6 +31,8 @@ paragens:
     contacto: "273926425"
     facebook: "https://www.facebook.com/restaurantelombada/"
     site: "https://restaurantelombada.com/"
+    instagram: "https://www.instagram.com/restaurante.lombada/"
+    tripadvisor: "https://www.tripadvisor.com/Restaurant_Review-g189172-d7099427-Reviews-Restaurante_Lombada-Braganca_Braganca_District_Northern_Portugal.html"
 ---
 
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.

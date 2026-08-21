@@ -32,6 +32,8 @@ paragens:
     contacto: "276010206"
     site: "https://www.7-maravilhas.com/"
     facebook: "https://www.facebook.com/p/Restaurante-7-Maravilhas-100063562597913/"
+    instagram: "https://www.instagram.com/restaurante_7maravilhas/"
+    tripadvisor: "https://www.tripadvisor.com/Restaurant_Review-g226944-d21491126-Reviews-Negroes-Montalegre_Vila_Real_District_Northern_Portugal.html"
 ---
 
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
