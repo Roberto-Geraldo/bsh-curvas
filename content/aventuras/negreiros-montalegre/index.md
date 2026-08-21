@@ -7,6 +7,8 @@ params:
   duracao: "1 dia"
   partida: "Arcozelo"
   chegada: "Negrões, Montalegre"
+gpx_ficheiros:
+  - file: "percurso.gpx"
 fotos:
   - foto01.jpeg
   - foto02.jpeg

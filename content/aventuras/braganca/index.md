@@ -9,6 +9,8 @@ params:
   duracao: 1 dia
   partida: Ferreiros
   chegada: Bragança
+gpx_ficheiros:
+  - file: "percurso.gpx"
 fotos:
   - foto01.jpg
   - foto02.jpg

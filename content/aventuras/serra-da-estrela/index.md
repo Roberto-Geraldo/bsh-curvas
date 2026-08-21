@@ -9,6 +9,9 @@ params:
   duracao: 15 e 16 de agosto de 2026
   partida: Ferreiros - BRG
   chegada: Tranca da Barriga - Covilhã
+gpx_ficheiros:
+  - file: "ida.gpx"
+  - file: "regresso.gpx"
 fotos:
   - foto17.jpeg
   - foto18.jpeg

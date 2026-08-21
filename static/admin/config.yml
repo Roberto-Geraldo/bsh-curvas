@@ -34,6 +34,12 @@ collections:
           - { label: "Duração", name: "duracao", widget: "string", required: false }
           - { label: "Partida", name: "partida", widget: "string", required: false }
           - { label: "Chegada", name: "chegada", widget: "string", required: false }
+      - label: "GPX (percursos)"
+        name: "gpx_ficheiros"
+        widget: "list"
+        required: false
+        hint: "Carrega aqui o(s) ficheiro(s) .gpx. Depois referencia o nome exato no Texto, ex: {{< mapa gpx=\"nome.gpx\" >}}"
+        field: { label: "Ficheiro GPX", name: "file", widget: "file" }
       - { label: "Texto", name: "body", widget: "markdown" }
       - { label: "Fotos", name: "fotos", widget: "fotos-galeria", required: false }
       - label: "Paragens (tascas, restaurantes, locais)"
