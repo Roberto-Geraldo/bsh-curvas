@@ -31,6 +31,7 @@ paragens:
     morada: "R. Principal 47, Vilarinho de Negrões, 5470-323 Montalegre"
     contacto: "276010206"
     site: "https://www.7-maravilhas.com/"
+    facebook: "https://www.facebook.com/p/Restaurante-7-Maravilhas-100063562597913/"
 ---
 
 Descrição da viagem: estrada, paisagem, paragens, o que correu bem ou mal.
