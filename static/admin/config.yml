@@ -38,7 +38,7 @@ collections:
         name: "gpx_ficheiros"
         widget: "list"
         required: false
-        hint: "Carrega aqui o(s) ficheiro(s) .gpx. Depois referencia o nome exato no Texto, ex: {{< mapa gpx=\"nome.gpx\" >}}"
+        hint: "Importante: o upload só coloca o ficheiro na pasta do passeio — depois tens de escrever {{< mapa gpx=\"nome.gpx\" >}} no campo Texto para o mapa aparecer nesse ponto da história (isto não é automático porque cada passeio pode ter mapas em sítios diferentes do texto, ou vários)."
         field: { label: "Ficheiro GPX", name: "file", widget: "file" }
       - { label: "Texto", name: "body", widget: "markdown" }
       - { label: "Fotos", name: "fotos", widget: "fotos-galeria", required: false }
